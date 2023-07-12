@@ -96,7 +96,7 @@ function Login() {
             <p className="or">(or)</p>
             <div className="btn-1">
               <button className="button-2" onClick={handleClick}>Login with Google</button>
-              <button className="button-2" onClick={handleFacebookLogin}>Login with FB</button>
+              <button className="button-2" onClick={handleFacebookLogin}>Login with Facebook</button>
             </div>
           </div>
 
