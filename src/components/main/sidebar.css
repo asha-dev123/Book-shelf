@@ -1,0 +1,33 @@
+.sidebar-1{
+ width: 250px;
+height: 994px;
+align-items: center;
+border-radius: 10px 0px 0px 10px;
+background: #FFF;
+}
+.home-img-1{
+    width: 100px;
+    height: 62px;
+    margin: 15% 20%;
+    
+}
+.link{
+    color: #4D4D4D;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: none;
+padding-bottom: 20px;
+}
+.side-box-1{
+    margin-top: 17%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.img-11{
+    padding-right: 10px;
+    margin-bottom: -2%;
+}

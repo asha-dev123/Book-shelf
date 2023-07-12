@@ -1,24 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import MyComponent from './components/api'
+import Login from './pages/login/login'
+import Signup from './pages/login/signup'
+import Home from './pages/home/home'
+import Sidebar from './components/main/sidebar';
+import Cart from './pages/shelf/cart.js';
+import Search from './pages/search/search';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <Router  basename={process.env.PUBLIC_URL}>
+        
+      <Routes>
+            <Route path='/' element={ <Home></Home>} />
+            <Route path='/login' element={ <Login></Login>} />
+            <Route path='/signup' element={ <Signup></Signup>} />
+            <Route path='/cart' element={ <Cart></Cart>} />
+            <Route path='/search' element={ <Search></Search>} />
+
+            {/* <Route path='/shelf' element={ <Shelf></Shelf>} /> */}
+      </Routes>
+            {/* <MyComponent></MyComponent> */}
+       {/* <Login></Login>
+   
+       <Signup></Signup> */}
+       
+        {/* <Sidebar></Sidebar> */}
+        {/* <Home></Home> */}
+        
+      </Router>
+     
+ 
+    
   );
 }
 
