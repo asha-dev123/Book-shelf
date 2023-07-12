@@ -2,18 +2,22 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from "../../components/main/sidebar";
 import search1 from '../../components/asserts/Search1.svg';
 import './home.css';
-import { Link } from 'react-router-dom';
+import { auth } from '../../components/config';
+import { Link, Navigate } from 'react-router-dom';
 import Cart from '../shelf/cart';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [cartItems, setCartItems] = useState([]); // Add this line
-
+  const [cartItems, setCartItems] = useState([]); 
+  const [email , setEmail] = useState(" "); 
+  
+  const navigate = useNavigate();
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://example-data.draftbit.com/books?_limit=9&q=${searchTerm}`
+        `https://example-data.draftbit.com/books?_limit=40&q=${searchTerm}`
       );
       const jsonData = await response.json();
 
@@ -31,6 +35,15 @@ function Home() {
 
   useEffect(() => {
     fetchData();
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        // User is logged in, set email state
+        setEmail(user.email);
+      } else {
+        // User is not logged in, set email state to empty string
+        setEmail('');
+      }
+    });
   }, [searchTerm]);
 
   const handleSearch = (e) => {
@@ -38,18 +51,26 @@ function Home() {
     fetchData();
   };
 
+  const handlelogout =() =>{
+    auth.signOut();
+    alert("logged out")
+    navigate("/login");
+
+
+  }
+
   const handleAddToCart = (item) => {
     setCartItems((prevCartItems) => [...prevCartItems, item]);
   };
 
   return (
-    <div>
+    <div className='container'>
       <div className="home">
         <div className='content'>
           <Sidebar></Sidebar>
         </div>
 
-        <div>
+        <div className='content-1'>
           <div className="home-box-1">
             <form onSubmit={handleSearch}>
               <input
@@ -60,10 +81,20 @@ function Home() {
                 placeholder="Search..."
               />
             </form>
-            <Link className='link-1' to="/login">
+            
+            <div>
+            {  auth.currentUser  ? ( 
+                <div> 
+          
+              <button onClick={handlelogout} className="button-2">Logout</button>
+      
+               </div>) :( <Link className='link-1' to="/login">
               <button className="button-2">Login</button>
-            </Link>
+            </Link>)}
+            </div>
+            
           </div>
+          <div className='good'>{email}</div>
           <div className="home-box-2">
             <div className="box-100">
               <p className="pp-1">Today’s Quote</p>
@@ -97,15 +128,13 @@ function Home() {
             </div>
           </div>
           <h1>Good Morning</h1>
+
           <p className="p-11">Recommended for You</p>
           <div className="books">
             {data.map((item) => (
               <div className="book-1" key={item.id}>
-                <img
-                  className="image1"
-                  src={item.image_url}
-                  alt={item.title}
-                />
+                <Link to=""> <img className="image1" src={item.image_url} alt={item.title}/></Link>
+               
                 <p className="title">{item.title}</p>
                 <p className="title-1">{item.authors}</p>
                 <div className='add-box'>
@@ -122,7 +151,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Cart cartItems={cartItems} /> 
+      {/* <Cart cartItems={cartItems} />  */}
     </div>
   );
 }

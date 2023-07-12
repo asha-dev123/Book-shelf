@@ -1,4 +1,8 @@
 body{
   /* background-image: url(C:\Users\91628\OneDrive\Desktop\devrev-project\src\components\asserts\1.png); */
-  background-color: red;
+  background-color: #F3F3F7;
+  background-image: url(C:\\Users\\91628\\OneDrive\\Desktop\\devrev-project\\src\\components\\asserts\\1.png);
+  background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }

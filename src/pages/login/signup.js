@@ -46,9 +46,9 @@ function Signup() {
                    
                     <label className="label-1">College Email ID</label>
               
-                    <input className="input-1" type='email' onChange={(e) => setEmail(e.target.value)} />
+                    <input className="input-1" type='email' onChange={(e) => setEmail(e.target.value)} placeholder="username@collegename.ac.in"/>
                     <label className="label-1">Password</label>
-                    <input className="input-1" type='password' onChange={(e) => setPassword(e.target.value)} />
+                    <input className="input-1" type='password' onChange={(e) => setPassword(e.target.value)} placeholder="•••••••••" />
                     <label className="label-1">Confirm Password</label>
                     <input className="input-1" type="mail" placeholder="•••••••••" ></input>
 

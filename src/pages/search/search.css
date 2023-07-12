@@ -1,0 +1,180 @@
+.search-container {
+    display: flex;
+
+}
+.container-1{
+    background-color: #F3F3F7;
+   
+   border-radius: 10px;
+}
+.search{
+    background-image: url('C:\\Users\\91628\\OneDrive\\Desktop\\devrev-project\\src\\components\\asserts\\Search1.svg');
+    background-repeat: no-repeat;
+    background-position: 299px 11px;
+}
+.search-box-2 {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.droupwown-1 {
+    color: #4D4D4D;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128.523%;
+    border: none;
+    margin-top: 30px;
+    padding-left: 1rem;
+    padding-right: 0px;
+    margin-right: 20px;
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 3px solid #D2D2D2;
+    appearance: none;
+
+
+}
+
+
+.search-books {
+    margin-top: 0%;
+    place-items: center;
+    width: 53%;
+    margin-top: 5%;
+    margin-top: -3%;
+}
+
+.image2 {
+    width: 80px;
+    height: 100px;
+}
+
+.search-book-1 {
+    margin-top: -20%;
+    width: 205%;
+    padding: 10px;
+    background: #FFF;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+
+
+
+
+}
+
+.search-books-10 {
+    display: flex;
+    padding-left: 50px;
+    margin-top: -1%;
+}
+
+.title-s {
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128.523%;
+}
+
+.title-2-s {
+    margin-top: -10%;
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128.523%;
+    width: 200px;
+}
+
+.title-3-s {
+    margin-top: -7%;
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128.523%;
+    width: 200px;
+}
+
+.search-titles {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+
+
+}
+
+.ppp-1 {
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128.523%;
+    margin-right: 20%;
+}
+
+.ppp-1-2 {
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128.523%;
+    margin-left: 12%;
+}
+
+.ppp-1-3 {
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128.523%;
+    margin-right: 27%;
+
+}
+
+.title-4-s {
+    padding-top: 35px;
+    padding-left: 100px;
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.s-box {
+    width: 180px;
+}
+
+.add-btn-1 {
+    color: #F76B56;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 1px solid #F76B56;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 90px;
+    padding: 10px 10px;
+}
+
+.class-200 {
+    width: 200px;
+}

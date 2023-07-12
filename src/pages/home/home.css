@@ -1,14 +1,30 @@
 body{
     background-color: #F3F3F7;
+  
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+
+}
+.container{
+    background-color: #F3F3F7;
+   
+   border-radius: 10px;
 }
 .home{
     display: flex;
-    
+    flex-direction: row;   
 }
-.content {
-   /* position: fixed */
-    
+.content{
+    grid-column: 20%;
 }
+.content-1{
+    grid-column: 80%;
+}
+
+
 .link-1{
     text-decoration: none;
 
@@ -22,6 +38,8 @@ body{
     
 }
 .search{
+    background-image: url('C:\\Users\\91628\\OneDrive\\Desktop\\devrev-project\\src\\components\\asserts\\Search.svg');
+    background-repeat:no-repeat ;
     border-radius: 40px;
         background: #FFF;
         width: 300px;
@@ -219,6 +237,10 @@ background-color: transparent;
 border-radius: 5px;
 padding: 2.5px 5px;
 
+}
+.good{
+    padding-left: 20px;
+    padding-top: 10px;
 }
 .add-box{
     display: flex;
