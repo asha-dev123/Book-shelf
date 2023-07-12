@@ -4,7 +4,7 @@ import search1 from '../../components/asserts/Search1.svg';
 import './home.css';
 import { auth } from '../../components/config';
 import { Link, Navigate } from 'react-router-dom';
-import Cart from '../shelf/cart';
+// import Cart from '../shelf/cart';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
