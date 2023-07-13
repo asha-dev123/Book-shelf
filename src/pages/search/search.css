@@ -2,16 +2,19 @@
     display: flex;
 
 }
-.container-1{
+
+.container-1 {
     background-color: #F3F3F7;
-   
-   border-radius: 10px;
+
+    border-radius: 10px;
 }
-.search{
+
+.search {
     background-image: url('C:\\Users\\91628\\OneDrive\\Desktop\\devrev-project\\src\\components\\asserts\\Search1.svg');
     background-repeat: no-repeat;
     background-position: 299px 11px;
 }
+
 .search-box-2 {
     margin-top: 50px;
     margin-left: 30px;

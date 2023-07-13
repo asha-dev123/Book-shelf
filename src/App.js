@@ -12,30 +12,30 @@ import Search from './pages/search/search';
 
 function App() {
   return (
-    
-      <Router  basename={process.env.PUBLIC_URL}>
-        
-      <Routes>
-            <Route path='/' element={ <Home></Home>} />
-            <Route path='/login' element={ <Login></Login>} />
-            <Route path='/signup' element={ <Signup></Signup>} />
-            <Route path='/cart' element={ <Cart></Cart>} />
-            <Route path='/search' element={ <Search></Search>} />
 
-            {/* <Route path='/shelf' element={ <Shelf></Shelf>} /> */}
+    <Router basename={process.env.PUBLIC_URL}>
+
+      <Routes>
+        <Route path='/' element={<Home></Home>} />
+        <Route path='/login' element={<Login></Login>} />
+        <Route path='/signup' element={<Signup></Signup>} />
+        <Route path='/cart' element={<Cart></Cart>} />
+        <Route path='/search' element={<Search></Search>} />
+
+        {/* <Route path='/shelf' element={ <Shelf></Shelf>} /> */}
       </Routes>
-            {/* <MyComponent></MyComponent> */}
-       {/* <Login></Login>
+      {/* <MyComponent></MyComponent> */}
+      {/* <Login></Login>
    
        <Signup></Signup> */}
-       
-        {/* <Sidebar></Sidebar> */}
-        {/* <Home></Home> */}
-        
-      </Router>
-     
- 
-    
+
+      {/* <Sidebar></Sidebar> */}
+      {/* <Home></Home> */}
+
+    </Router>
+
+
+
   );
 }
 

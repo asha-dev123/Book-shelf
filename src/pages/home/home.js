@@ -10,9 +10,9 @@ import { useNavigate } from 'react-router-dom';
 function Home() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [cartItems, setCartItems] = useState([]); 
-  const [email , setEmail] = useState(" "); 
-  
+  const [cartItems, setCartItems] = useState([]);
+  const [email, setEmail] = useState(" ");
+
   const navigate = useNavigate();
   const fetchData = async () => {
     try {
@@ -37,10 +37,10 @@ function Home() {
     fetchData();
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        // User is logged in, set email state
+       
         setEmail(user.email);
       } else {
-        // User is not logged in, set email state to empty string
+        
         setEmail('');
       }
     });
@@ -51,7 +51,7 @@ function Home() {
     fetchData();
   };
 
-  const handlelogout =() =>{
+  const handlelogout = () => {
     auth.signOut();
     alert("logged out")
     navigate("/login");
@@ -81,18 +81,18 @@ function Home() {
                 placeholder="Search..."
               />
             </form>
-            
+
             <div>
-            {  auth.currentUser  ? ( 
-                <div> 
-          
-              <button onClick={handlelogout} className="button-2">Logout</button>
-      
-               </div>) :( <Link className='link-1' to="/login">
-              <button className="button-2">Login</button>
-            </Link>)}
+              {auth.currentUser ? (
+                <div>
+
+                  <button onClick={handlelogout} className="button-2">Logout</button>
+
+                </div>) : (<Link className='link-1' to="/login">
+                  <button className="button-2">Login</button>
+                </Link>)}
             </div>
-            
+ 
           </div>
           <div className='good'>{email}</div>
           <div className="home-box-2">
@@ -133,8 +133,8 @@ function Home() {
           <div className="books">
             {data.map((item) => (
               <div className="book-1" key={item.id}>
-                <Link to=""> <img className="image1" src={item.image_url} alt={item.title}/></Link>
-               
+                <Link to=""> <img className="image1" src={item.image_url} alt={item.title} /></Link>
+
                 <p className="title">{item.title}</p>
                 <p className="title-1">{item.authors}</p>
                 <div className='add-box'>

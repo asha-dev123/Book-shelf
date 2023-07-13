@@ -8,30 +8,30 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from "../../components/config"
 
 function Signup() {
-   
-    
+
+
     const auth = getAuth();
     const [password, setPassword] = useState(" ");
-    const [email, setEmail] = useState(" ");
-   
-    const signup = ()=>{
+    const [email, setEmail] = useState(" ");
+
+    const signup = () => {
         createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            
-            const user = userCredential.user;
-            console.log(user);
-            alert("created an account")
-           
-            
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            alert(errorCode)
-            
-        });
+            .then((userCredential) => {
+
+                const user = userCredential.user;
+                console.log(user);
+                alert("created an account")
+
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                alert(errorCode)
+
+            });
 
     }
-    
+
     return (
         <div>
 
@@ -43,18 +43,18 @@ function Signup() {
                 <div className="inner-box-1">
                     <label className="label-1">Name</label>
                     <input className="input-1" type="text" placeholder="Name"></input>
-                   
+
                     <label className="label-1">College Email ID</label>
-              
-                    <input className="input-1" type='email' onChange={(e) => setEmail(e.target.value)} placeholder="username@collegename.ac.in"/>
+
+                    <input className="input-1" type='email' onChange={(e) => setEmail(e.target.value)} placeholder="username@collegename.ac.in" />
                     <label className="label-1">Password</label>
-                    <input className="input-1" type='password' onChange={(e) => setPassword(e.target.value)} placeholder="•••••••••" />
+                    <input className="input-1" type='password' onChange={(e) => setPassword(e.target.value)} placeholder="•••••••••" />
                     <label className="label-1">Confirm Password</label>
                     <input className="input-1" type="mail" placeholder="•••••••••" ></input>
 
                     <button className="button-1" onClick={signup}>Register</button>
                     <div className="inner-box-3">
-                        
+
                         <p className="p3">Already a User?<Link className="link-1" to="/login">Login now</Link></p>
                         <p className="p3">Use as Guest </p>
                     </div>

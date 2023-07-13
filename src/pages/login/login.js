@@ -101,7 +101,7 @@ function Login() {
           </div>
 
 
-         
+
 
 
 
@@ -109,9 +109,9 @@ function Login() {
 
 
         <div className="inner-box-3">
-            <p className="p3">New User?<Link className="link-1" to="/signup">Register Here</Link></p>
-            <p className="p3">Use as Guest </p>
-          </div>
+          <p className="p3">New User?<Link className="link-1" to="/signup">Register Here</Link></p>
+          <p className="p3">Use as Guest </p>
+        </div>
 
 
 

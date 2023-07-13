@@ -38,12 +38,12 @@ function Search() {
   };
   return (
     <div className='container-1'>
-    <div className="search-container">
-     
-      <div className='search-box-1'>
-        <Sidebar></Sidebar>
-      </div>
-      
+      <div className="search-container">
+
+        <div className='search-box-1'>
+          <Sidebar></Sidebar>
+        </div>
+
 
 
         <div className="search-box-2">
@@ -56,10 +56,10 @@ function Search() {
               placeholder="Search..."
             />
           </form>
-         
+
           <select className='droupwown-1'>
             <option value="all">All Genre ▾</option>
-           
+
             <option value="author2">Romantic</option>
             <option value="author3">History</option>
             <option value="author1">Fiction</option>
